@@ -85,24 +85,7 @@ public class MyLinkedList<E> implements List<E> {
 
 	@Override
 	public void add(int index, E element) {
-	    // First, check index bounds
-	    if (index < 0 || index > size) {
-	        throw new IndexOutOfBoundsException();
-	    }
-	    
-	    // Case 1: Add at the head
-	    if (index == 0) {
-	        head = new Node(element, head);
-	    } else {
-	        // Find node just before insertion point
-	        Node prev = head;
-	        for (int i = 0; i < index - 1; i++) {
-	            prev = prev.next;
-	        }
-	        prev.next = new Node(element, prev.next);
-	    }
-	    
-	    size++;
+		// TODO: fill this in
 	}
 
 	@Override
@@ -224,43 +207,14 @@ public class MyLinkedList<E> implements List<E> {
 
 	@Override
 	public boolean remove(Object obj) {
-		Node prev = null;
-		Node curr = head;
-		for (int i = 0; i < size; i++) {
-			if (equals(obj, curr.cargo)) {
-				if (prev == null) { // Removing head
-					head = curr.next;
-				} else {
-					prev.next = curr.next;
-				}
-				size--;
-				return true;
-			}
-			prev = curr;
-			curr = curr.next;
-		}
+		// TODO: fill this in
 		return false;
 	}
 
 	@Override
 	public E remove(int index) {
-		if (index < 0 || index >= size) {
-			throw new IndexOutOfBoundsException();
-		}
-		Node prev = null;
-		Node curr = head;
-		for (int i = 0; i < index; i++) {
-			prev = curr;
-			curr = curr.next;
-		}
-		E removedCargo = curr.cargo;
-		if (prev == null) { // Removing head
-			head = curr.next;
-		} else {
-			prev.next = curr.next;
-		}
-		size--;
-		return removedCargo;
+		// TODO: fill this in
+		return null;
 	}
 
 	@Override
